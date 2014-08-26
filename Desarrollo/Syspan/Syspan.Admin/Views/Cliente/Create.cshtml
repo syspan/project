@@ -1,0 +1,81 @@
+﻿@model Syspan.Admin.Models.Views.ClienteModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ClienteModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Rut, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Rut)
+                @Html.ValidationMessageFor(model => model.Rut)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NombreFantasia, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NombreFantasia)
+                @Html.ValidationMessageFor(model => model.NombreFantasia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CodSucursal, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CodSucursal)
+                @Html.ValidationMessageFor(model => model.CodSucursal)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Memotecnico, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Memotecnico)
+                @Html.ValidationMessageFor(model => model.Memotecnico)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SaldoMax, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SaldoMax)
+                @Html.ValidationMessageFor(model => model.SaldoMax)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Observacion, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Observacion)
+                @Html.ValidationMessageFor(model => model.Observacion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

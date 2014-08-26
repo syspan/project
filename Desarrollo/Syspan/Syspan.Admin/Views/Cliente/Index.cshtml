@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Syspan.Admin.Models.Views.ClienteModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreFantasia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodSucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memotecnico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaldoMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreFantasia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodSucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memotecnico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaldoMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Rut }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Rut }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Rut })
+        </td>
+    </tr>
+}
+
+</table>
