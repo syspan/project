@@ -8,3 +8,13 @@ D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.SqlSer
 D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.dll
 D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.pdb
 D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.csprojResolveAssemblyReference.cache
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\Syspan.Core.dll.config
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\Syspan.Core.dll
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\Syspan.Core.pdb
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.dll
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.xml
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.dll
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.pdb
+D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.csprojResolveAssemblyReference.cache
