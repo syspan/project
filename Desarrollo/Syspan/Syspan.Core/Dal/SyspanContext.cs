@@ -14,10 +14,18 @@ namespace Syspan.Core.Dal
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Giro> Giros { get; set; }
+
+        public DbSet<FormaDePago> FormaDePagos { get; set; }
+
+        public DbSet<RepartoZona> RepartoZonas { get; set; }
+
+        public DbSet<ClienteEstado> ClienteEstados { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
 
             //modelBuilder.Entity<Group>()
             //    .HasMany(u => u.Users).WithMany(g => g.Groups)

@@ -1,4 +1,5 @@
-﻿@model Syspan.Admin.Models.Views.ClienteModel
+﻿@using System.Web.UI.WebControls
+@model Syspan.Admin.Models.Views.ClienteModel
 
 @{
     ViewBag.Title = "Create";
@@ -20,11 +21,11 @@
     <!-- END CONTENT HEADER -->
     <!-- BEGIN MAIN CONTENT -->
     <section class="content">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="grid">
                 <div class="grid-header">
                     <i class="fa fa-align-left"></i>
-                    <span class="grid-title">Horizontal Form</span>
+                    <span class="grid-title">Principal</span>
                     <div class="pull-right grid-tools">
                         <a data-widget="collapse" title="Collapse"><i class="fa fa-chevron-up"></i></a>
                         <a data-widget="reload" title="Reload"><i class="fa fa-refresh"></i></a>
@@ -32,43 +33,100 @@
                     </div>
                 </div>
                 <div class="grid-body">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Rut, htmlAttributes: new { @class = "col-sm-2 control-label" })
-                            <div class="col-sm-10">
-                                @Html.EditorFor(model => model.Rut, new { htmlAttributes = new { @class = "form-control"} })
-                                @Html.ValidationMessageFor(model => model.Rut, "", new { @class = "text-danger" })
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <fieldset>
+                                @*<legend>Principal</legend>*@
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        @Html.LabelFor(model => model.Rut)
+                                        @Html.TextBoxFor(model => model.Rut, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Rut, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @Html.LabelFor(model => model.Memotecnico)
+                                        @Html.TextBoxFor(model => model.Memotecnico, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Memotecnico, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @Html.LabelFor(model => model.Nombre)
+                                        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @Html.LabelFor(model => model.NombreFantasia)
+                                        @Html.TextBoxFor(model => model.NombreFantasia, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.NombreFantasia, "", new { @class = "text-danger" })
+                                    </div>
 
-                            </div>
-                            @Html.LabelFor(model => model.CodSucursal, htmlAttributes: new { @class = "col-sm-2 control-label" })
-                            <div class="col-sm-11">
-                                @Html.EditorFor(model => model.CodSucursal, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.CodSucursal, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        @*@Html.LabelFor(model => model.IdGiro)
+                                        @Html.DropDownListFor(model => model.IdGiro, null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.IdGiro, "", new { @class = "text-danger" })*@
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @*@Html.LabelFor(model => model.IdReparto)
+                                        @Html.DropDownListFor(model => model.IdReparto, null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.IdReparto, "", new { @class = "text-danger" })*@
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @*@Html.LabelFor(model => model.IdFormaPago)
+                                        @Html.DropDownListFor(model => model.IdFormaPago, null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.IdFormaPago, "", new { @class = "text-danger" }*@)
+                                    </div>
+                                    <div class="col-sm-3">
+                                        @*@Html.LabelFor(model => model.IdEstado)
+                                        @Html.DropDownListFor(model => model.IdEstado, null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.IdEstado, "", new { @class = "text-danger" })*@
+                                    </div>
+                                </div>
 
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" class="icheck"> Remember me</label>
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        @*@Html.LabelFor(model => model.Email)
+                                        @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })*@
+                                    </div>
+                                </div>
+                                <div class="form-group voffset1">
+                                    <div class="col-sm-12" style="margin-top: 50px">
+                                        @Html.Partial("_TextArea")
+                                    </div>
+                                </div>
+                                <div class="form-group voffset1">
+                                    <div class="col-sm-3">
+                                        @Html.LabelFor(model => model.SaldoMax)
+                                        @Html.TextBoxFor(model => model.SaldoMax, null, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.SaldoMax, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </fieldset>
+                            @*<fieldset>
+                                  <div style="margin-top: 50px">
+
+                                      <legend>Direcciones</legend>
+                                      <div class="form-group">
+                                          <div class="col-sm-12">
+                                              <label for="user_locale">Language</label>
+                                              <select class="form-control" id="user_locale" name="user[locale]">
+                                                  <option value="de" selected="selected">Deutsch</option>
+                                                  <option value="en">English</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+                            </fieldset>*@
+                    
+
+                            <div class="form-group">
+                                <div class="navbar-right navbar-default">
+                                    <input class="btn btn-primary" value="Guardar Cliente" data-loading-text="Loading..." id="btnSubmit" type="submit">
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <div class="btn-group">
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
-                                    <button type="submit" class="btn btn-default">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        }
                 </div>
             </div>
         </div>   
@@ -76,71 +134,7 @@
      </section>
         <!-- END MAIN CONTENT -->
 </aside>
-    @*@using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <h4>ClienteModel</h4>
-            <hr />
-            @Html.ValidationSummary(true)
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Rut, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Rut)
-                    @Html.ValidationMessageFor(model => model.Rut)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.NombreFantasia, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.NombreFantasia)
-                    @Html.ValidationMessageFor(model => model.NombreFantasia)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.CodSucursal, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.CodSucursal)
-                    @Html.ValidationMessageFor(model => model.CodSucursal)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Memotecnico, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Memotecnico)
-                    @Html.ValidationMessageFor(model => model.Memotecnico)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.SaldoMax, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.SaldoMax)
-                    @Html.ValidationMessageFor(model => model.SaldoMax)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Observacion, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Observacion)
-                    @Html.ValidationMessageFor(model => model.Observacion)
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
-        </div>
-    }*@
-
+   
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>

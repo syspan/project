@@ -398,7 +398,7 @@
     <!-- BEGIN JS FRAMEWORK -->
     <script src="~/Content/assets/plugins/jquery-2.1.0.min.js"></script>
     <script src="~/Content/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- END JS FRAMEWORK -->
+    <!-- END JS FRAMEWORK -->z
     <!-- BEGIN JS PLUGIN -->
     <script src="~/Content/assets/plugins/pace/pace.min.js"></script>
     <script src="~/Content/assets/plugins/jquery-totemticker/jquery.totemticker.min.js"></script>
@@ -415,6 +415,29 @@
     <!-- BEGIN JS TEMPLATE -->
     <script src="~/Content/assets/js/main.js"></script>
     <script src="~/Content/assets/js/skin-selector.js"></script>
+
+    <script src="~/Content/assets/plugins/bootstrap-summernote/summernote.min.js"></script>
+    <script type="text/javascript">
+        /* SUMMERNOTE WYSIWYG */
+        jQuery('#summernote').summernote({
+            height: 300
+        });
+
+        jQuery('#click2edit').click(function () {
+            $(this).summernote({
+                focus: true,
+                onblur: function (e) {
+                    $('#click2edit').destroy();
+                }
+            });
+        });
+
+        $('#airmode').summernote({
+            height: 300,
+            airMode: true
+        });
+    </script>
+
     <!-- END JS TEMPLATE -->
 </body>
 

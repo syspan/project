@@ -32,5 +32,20 @@ namespace Syspan.Admin.Models.Views
         [Display(Name = "ClienteModel_Observacion", ResourceType = typeof(Resources))]
         public string Observacion { get; set; }
 
+        [Required]
+        [Display(Name = "ClientModel_Giro", ResourceType = typeof(Resources))]
+        public int IdGiro { get; set; }
+
+        [Required]
+        [Display(Name = "ClientModel_ZonaReparto", ResourceType = typeof(Resources))]
+        public int IdReparto { get; set; }
+
+        [Required]
+        [Display(Name = "ClientModel_FormaPago", ResourceType = typeof(Resources))]
+        public int IdFormaPago { get; set; }
+
+        [Required]
+        [Display(Name = "ClientModel_Estado", ResourceType = typeof(Resources))]
+        public int IdEstado { get; set; }
     }
 }

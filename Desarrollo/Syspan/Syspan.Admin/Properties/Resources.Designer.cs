@@ -61,7 +61,7 @@ namespace Syspan.Admin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Codigo de Sucursal.
+        ///   Looks up a localized string similar to Cod. Sucursal.
         /// </summary>
         public static string ClienteModel_CodSucursal {
             get {
@@ -102,6 +102,42 @@ namespace Syspan.Admin.Properties {
         public static string ClienteModel_SaldoMax {
             get {
                 return ResourceManager.GetString("ClienteModel_SaldoMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Estado.
+        /// </summary>
+        public static string ClientModel_Estado {
+            get {
+                return ResourceManager.GetString("ClientModel_Estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forma de Pago.
+        /// </summary>
+        public static string ClientModel_FormaPago {
+            get {
+                return ResourceManager.GetString("ClientModel_FormaPago", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Giro.
+        /// </summary>
+        public static string ClientModel_Giro {
+            get {
+                return ResourceManager.GetString("ClientModel_Giro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zona de Reparto.
+        /// </summary>
+        public static string ClientModel_ZonaReparto {
+            get {
+                return ResourceManager.GetString("ClientModel_ZonaReparto", resourceCulture);
             }
         }
         

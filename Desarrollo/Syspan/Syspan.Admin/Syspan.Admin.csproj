@@ -1014,6 +1014,7 @@
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutTable.cshtml" />
     <Content Include="Views\Shared\_LayoutForm.cshtml" />
+    <Content Include="Views\Shared\_TextArea.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

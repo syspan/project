@@ -49,9 +49,13 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Dal\SyspanContext.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteEstado.cs" />
+    <Compile Include="Models\FormaDePago.cs" />
     <Compile Include="Models\Generic\Comuna.cs" />
     <Compile Include="Models\Generic\Direccion.cs" />
     <Compile Include="Models\Generic\Enumerations.cs" />
+    <Compile Include="Models\Giro.cs" />
+    <Compile Include="Models\RepartoZona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

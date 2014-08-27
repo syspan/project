@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using AutoMapper;
+using Microsoft.Ajax.Utilities;
 using Syspan.Admin.Models.Views;
 using Syspan.Core.Dal;
 using Syspan.Core.Models;
@@ -18,7 +19,7 @@ namespace Syspan.Admin.Controllers
         public ActionResult Index()
         {
             Mapper.CreateMap<Cliente, ClienteModel>();
-            var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.ToList());
+            var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.ToList()); //.Include(p => p.Giro).ToList()
 
             return View(clients);
         }
@@ -44,6 +45,11 @@ namespace Syspan.Admin.Controllers
         // GET: /Cliente/Create
         public ActionResult Create()
         {
+            ViewBag.IdGiro = new SelectList(db.Giros, "Id", "Nombre");
+            ViewBag.IdReparto = new SelectList(db.RepartoZonas, "Id", "Nombre");
+            ViewBag.IdFormaPago = new SelectList(db.FormaDePagos, "Id", "Nombre");
+            ViewBag.IdEstado = new SelectList(db.ClienteEstados, "Id", "Nombre");
+
             return View();
         }
 

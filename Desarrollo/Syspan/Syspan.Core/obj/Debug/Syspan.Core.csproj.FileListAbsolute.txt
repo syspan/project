@@ -7,7 +7,6 @@ D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.xml
 D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.SqlServer.xml
 D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.dll
 D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.pdb
-D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.csprojResolveAssemblyReference.cache
 D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\Syspan.Core.dll.config
 D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\Syspan.Core.dll
 D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\Syspan.Core.pdb
