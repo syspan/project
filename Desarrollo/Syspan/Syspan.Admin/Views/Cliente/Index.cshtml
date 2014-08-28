@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_LayoutTable.cshtml";
 }
 
-<h2>Index</h2>
 <!-- BEGIN CSS PLUGIN -->
 <link rel="stylesheet" href="~/Content/assets/plugins/pace/pace-theme-minimal.css">
 <link rel="stylesheet" href="~/Content/assets/plugins/jquery-datatables/css/dataTables.bootstrap.css">
@@ -17,13 +16,21 @@
     <!-- BEGIN CONTENT HEADER -->
     <section class="content-header">
         <i class="fa fa-table"></i>
-        <span>DataTables</span>
+        <span>Clientes</span>
         <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Clientes</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+            <li><a href="@Url.Action("Index", "Cliente")">Clientes</a></li>
         </ol>
         <p>
-            @Html.ActionLink("Create New", "Create")
+         
+
+            @*@Html.ActionLink("Create New", "Create")*@
+            
+            <a href="@Url.Action("Create", "Cliente")">
+                <button type="button" class="btn btn-default">
+                    <i class="fa fa-edit"></i> Agregar
+                </button>
+            </a>
         </p>
     </section>
     <!-- END CONTENT HEADER -->
@@ -35,7 +42,7 @@
                 <div class="grid no-border">
                     <div class="grid-header">
                         <i class="fa fa-table"></i>
-                        <span class="grid-title">Basic DataTables</span>
+                        <span class="grid-title">Clientes</span>
                         <div class="pull-right grid-tools">
                             <a data-widget="collapse" title="Collapse"><i class="fa fa-chevron-up"></i></a>
                             <a data-widget="reload" title="Reload"><i class="fa fa-refresh"></i></a>
@@ -50,19 +57,28 @@
                                         @Html.DisplayNameFor(model => model.Rut)
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.NombreFantasia)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.CodSucursal)
+                                        @Html.DisplayNameFor(model => model.Nombre)
                                     </th>
                                     <th>
                                         @Html.DisplayNameFor(model => model.Memotecnico)
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.SaldoMax)
+                                        @Html.DisplayNameFor(model => model.IdGiro)
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.Observacion)
+                                        @Html.DisplayNameFor(model => model.NombreFantasia)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IdEstado)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IdReparto)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IdFormaPago)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SaldoMax)
                                     </th>
                                     <th></th>
                                 </tr>
@@ -76,24 +92,37 @@
                                             @Html.DisplayFor(modelItem => item.Rut)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.NombreFantasia)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.CodSucursal)
+                                            @Html.DisplayFor(modelItem => item.Nombre)
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.Memotecnico)
                                         </td>
                                         <td>
+                                            @Html.DisplayFor(modelItem => item.Giro.Nombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NombreFantasia)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ClienteEstado.Nombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RepartoZona.Nombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FormaDePago.Nombre)
+                                        </td>
+                                        <td>
                                             @Html.DisplayFor(modelItem => item.SaldoMax)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.Observacion)
-                                        </td>
-                                        <td>
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.Rut }) |
-                                            @Html.ActionLink("Details", "Details", new { id = item.Rut }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.Rut })
+                                            <a href="@Url.Action("Edit", "Cliente", new { id = item.Rut })">
+                                                <i class="fa fa-pencil bg-blue action"></i>
+                                            </a>
+                                            <a href="@Url.Action("Delete", "Cliente", new { id = item.Rut })">
+                                                <i class="fa fa-times bg-red action"></i>
+                                            </a>
+
                                         </td>
                                     </tr>
                                 }

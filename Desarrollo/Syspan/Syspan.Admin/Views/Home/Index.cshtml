@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Inicio";
 }
 
      <aside class="right-side">
@@ -8,7 +8,7 @@
                 <i class="fa fa-home"></i>
                 <span>Dashboard</span>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
                     <li class="active">Dashboard</li>
                 </ol>
             </section>
@@ -145,7 +145,7 @@
                     <div class="col-md-4">
                         <div class="grid box-profile bg-red">
                             <div class="grid-body">
-                                <img src="Content/assets/img/user/avatar01.png" class="img-circle" alt="User Profile">
+                                <img src="~/Content/assets/img/user/avatar01.png" class="img-circle" alt="User Profile">
                                 <h3>Jeffrey Williams</h3>
                                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod</span>
                             </div>

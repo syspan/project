@@ -20,7 +20,8 @@ namespace Syspan.Admin.Controllers
         public ActionResult Index()
         {
             Mapper.CreateMap<Cliente, ClienteModel>();
-            var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.ToList()); //.Include(p => p.Giro).ToList()
+            //var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.Include(c => c.Giro).Include(c => c.ClienteEstado).Include(c => c.FormaPago).Include(c=> c.RepartoZona).ToList());
+            var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.Include(c => c.Giro).Include(c => c.FormaPago).Include(c=> c.RepartoZona).ToList());
             
             return View(clients);
         }
@@ -58,7 +59,11 @@ namespace Syspan.Admin.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Rut,Memotecnico,Nombre,Email,NombreFantasia,CodSucursal,Memotecnico,SaldoMax,Observacion,IdGiro,IdReparto,IdFormaPago,IdEstado")] ClienteModel clientemodel)
+        public ActionResult Create(
+            [Bind(
+                Include =
+                    "Rut,Memotecnico,Nombre,Email,NombreFantasia,CodSucursal,Memotecnico,SaldoMax,Observacion,IdGiro,IdReparto,IdFormaPago,IdEstado"
+                )] ClienteModel clientemodel)
         {
             Mapper.CreateMap<ClienteModel, Cliente>();
             var client = Mapper.Map<ClienteModel, Cliente>(clientemodel);
@@ -66,11 +71,12 @@ namespace Syspan.Admin.Controllers
             if (ModelState.IsValid)
             {
                 db.Entidades.Add(
-                    new Entidad{
+                    new Entidad
+                    {
                         Email = clientemodel.Email,
                         Rut = clientemodel.Rut,
                         Nombre = clientemodel.Nombre
-         
+
                     }
                     );
                 db.SaveChanges();
@@ -78,19 +84,16 @@ namespace Syspan.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            else
-            {
-                ViewBag.IdGiro = new SelectList(db.Giros, "Id", "Nombre");
-                ViewBag.IdReparto = new SelectList(db.RepartoZonas, "Id", "Nombre");
-                ViewBag.IdFormaPago = new SelectList(db.FormaDePagos, "Id", "Nombre");
-                ViewBag.IdEstado = new SelectList(db.ClienteEstados, "Id", "Nombre");
 
-            }
+            ViewBag.IdGiro = new SelectList(db.Giros, "Id", "Nombre");
+            ViewBag.IdReparto = new SelectList(db.RepartoZonas, "Id", "Nombre");
+            ViewBag.IdFormaPago = new SelectList(db.FormaDePagos, "Id", "Nombre");
+            ViewBag.IdEstado = new SelectList(db.ClienteEstados, "Id", "Nombre");
 
             return View(clientemodel);
         }
+    
 
-        // GET: /Cliente/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -100,11 +103,13 @@ namespace Syspan.Admin.Controllers
 
             Mapper.CreateMap<Cliente, ClienteModel>();
             var client = Mapper.Map<Cliente, ClienteModel>(db.Clientes.Find(id));
+
+            ViewBag.IdGiro = new SelectList(db.Giros, "Id", "Nombre", client.IdGiro);
+            ViewBag.IdReparto = new SelectList(db.RepartoZonas, "Id", "Nombre", client.IdReparto);
+            ViewBag.IdFormaPago = new SelectList(db.FormaDePagos, "Id", "Nombre", client.IdFormaPago);
+            ViewBag.IdEstado = new SelectList(db.ClienteEstados, "Id", "Nombre", client.IdEstado);
             
-            if (client == null)
-            {
-                return HttpNotFound();
-            }
+        
             return View(client);
         }
 
@@ -112,7 +117,7 @@ namespace Syspan.Admin.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Rut,NombreFantasia,CodSucursal,Memotecnico,SaldoMax,Observacion")] ClienteModel clientemodel)
+        public ActionResult Edit([Bind(Include="Rut,Memotecnico,Nombre,Email,NombreFantasia,CodSucursal,Memotecnico,SaldoMax,Observacion,IdGiro,IdReparto,IdFormaPago,IdEstado")] ClienteModel clientemodel)
         {
             Mapper.CreateMap<ClienteModel, Cliente>();
             var client = Mapper.Map<ClienteModel, Cliente>(clientemodel);
@@ -123,6 +128,13 @@ namespace Syspan.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            ViewBag.IdGiro = new SelectList(db.Giros, "Id", "Nombre");
+            ViewBag.IdReparto = new SelectList(db.RepartoZonas, "Id", "Nombre");
+            ViewBag.IdFormaPago = new SelectList(db.FormaDePagos, "Id", "Nombre");
+            ViewBag.IdEstado = new SelectList(db.ClienteEstados, "Id", "Nombre");
+
+
             return View(clientemodel);
         }
 

@@ -11,7 +11,7 @@ function initNotification() {
 			$.gritter.add({
 				title: 'Welcome back!',
 				text: 'You have 4 new notifications and 3 new messages.',
-				image: 'assets/img/user/avatar01.png',
+				image: '../Content/assets/img/user/avatar01.png',
 				time: ''
 			});
 			return false;

@@ -15,12 +15,22 @@ namespace Syspan.Core.Models.Generic
         /// <summary>
         /// gets or sets the descrition
         /// </summary>
-        public string Descripcion { get; set; }
+        public int Descripcion { get; set; }
+
+        /// <summary>
+        /// gets or sets the descrition
+        /// </summary>
+        public int Numero { get; set; }
+
+        /// <summary>
+        /// gets or sets the type
+        /// </summary>
+        public int Tipo { get; set; }
 
         /// <summary>
         /// gets or sets the comuna
         /// </summary>
-        public string Comuna { get; set; }
+        public string IdComuna { get; set; }
 
         /// <summary>
         /// Gets or sets the ciudad

@@ -173,6 +173,7 @@
     </Compile>
     <Compile Include="Models\Views\ClienteModel.cs" />
     <Compile Include="Models\Views\EntidadModel.cs" />
+    <Compile Include="Models\Views\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -981,6 +982,7 @@
     <Content Include="Content\assets\plugins\font-awesome\scss\_variables.scss" />
     <Content Include="Content\assets\plugins\jquery-datatables\images\Sorting icons.psd" />
     <Content Include="Content\assets\plugins\select2\select2_locale_en.js.template" />
+    <None Include="Properties\PublishProfiles\Syspan.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1022,6 +1024,10 @@
     <Content Include="Views\Giros\Details.cshtml" />
     <Content Include="Views\Giros\Edit.cshtml" />
     <Content Include="Views\Giros\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutHeader.cshtml" />
+    <Content Include="Views\Shared\_LayoutMenu.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

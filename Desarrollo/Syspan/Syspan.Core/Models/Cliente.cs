@@ -2,15 +2,16 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using Syspan.Core.Models.Generic;
 
 namespace Syspan.Core.Models
 {
     [Table("Cliente")] 
-    public class Cliente
+    public class Cliente : Entidad
     {
         private ClienteStatus _estado = ClienteStatus.Active;
-        [Key]
-        public string Rut { get; set; }
+        //[Key]
+        //public string Rut { get; set; }
        
         /// <summary>
         /// Gets or sets the property alias
