@@ -12,15 +12,16 @@ namespace Syspan.Admin.Models.Views
     public class EntidadModel
     {
         [Key]
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
+        [RegularExpression(@"\b\d{1,8}\-[K|k|0-9]", ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "EntidadModel_Rut_InvalidFormat")]
         public string Rut { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [StringLength(100)]
         [Display(Name = "EntidadModel_Nombre", ResourceType = typeof(Resources))]
         public string Nombre { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [StringLength(50)]
         [EmailAddress]
         [Display(Name = "EntidadModel_Email", ResourceType = typeof(Resources))]

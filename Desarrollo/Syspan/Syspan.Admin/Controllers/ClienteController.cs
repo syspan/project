@@ -8,6 +8,7 @@ using Microsoft.Ajax.Utilities;
 using Syspan.Admin.Models.Views;
 using Syspan.Core.Dal;
 using Syspan.Core.Models;
+using Syspan.Core.Models.Generic;
 
 namespace Syspan.Admin.Controllers
 {
@@ -57,13 +58,22 @@ namespace Syspan.Admin.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Rut,NombreFantasia,CodSucursal,Memotecnico,SaldoMax,Observacion")] ClienteModel clientemodel)
+        public ActionResult Create([Bind(Include = "Rut,Memotecnico,Nombre,Email,NombreFantasia,CodSucursal,Memotecnico,SaldoMax,Observacion,IdGiro,IdReparto,IdFormaPago,IdEstado")] ClienteModel clientemodel)
         {
             Mapper.CreateMap<ClienteModel, Cliente>();
             var client = Mapper.Map<ClienteModel, Cliente>(clientemodel);
 
             if (ModelState.IsValid)
             {
+                db.Entidades.Add(
+                    new Entidad{
+                        Email = clientemodel.Email,
+                        Rut = clientemodel.Rut,
+                        Nombre = clientemodel.Nombre
+         
+                    }
+                    );
+                db.SaveChanges();
                 db.Clientes.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index");

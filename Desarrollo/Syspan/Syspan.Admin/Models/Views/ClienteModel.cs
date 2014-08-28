@@ -7,45 +7,44 @@ namespace Syspan.Admin.Models.Views
 {
     public class ClienteModel : EntidadModel
     {
-      
-        [Required(ErrorMessage = "Es Requerido")]
+
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [StringLength(100)]
         [Display(Name = "ClienteModel_NombreFantasia", ResourceType = typeof(Resources))]
         public string NombreFantasia { get; set; }
 
-        [Required]
+        //[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [StringLength(100)]
         [Display(Name = "ClienteModel_CodSucursal", ResourceType = typeof(Resources))]
         public string CodSucursal { get; set; }
 
-        [Required]
+        //[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [StringLength(100)]
         [Display(Name = "ClienteModel_Memotecnico", ResourceType = typeof(Resources))]
         public string Memotecnico { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         //[Range(typeof(Int32), "0", "9999", ErrorMessage = "")]
         [Display(Name = "ClienteModel_SaldoMax", ResourceType = typeof(Resources))]
         public int SaldoMax { get; set; }
 
-        [Required]
         [StringLength(1000)]
         [Display(Name = "ClienteModel_Observacion", ResourceType = typeof(Resources))]
         public string Observacion { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [Display(Name = "ClientModel_Giro", ResourceType = typeof(Resources))]
         public int IdGiro { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [Display(Name = "ClientModel_ZonaReparto", ResourceType = typeof(Resources))]
         public int IdReparto { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [Display(Name = "ClientModel_FormaPago", ResourceType = typeof(Resources))]
         public int IdFormaPago { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
         [Display(Name = "ClientModel_Estado", ResourceType = typeof(Resources))]
         public int IdEstado { get; set; }
 

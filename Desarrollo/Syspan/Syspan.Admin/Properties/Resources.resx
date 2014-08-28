@@ -150,4 +150,10 @@
   <data name="ClientModel_ZonaReparto" xml:space="preserve">
     <value>Zona de Reparto</value>
   </data>
+  <data name="EntidadModel_Rut_InvalidFormat" xml:space="preserve">
+    <value>RUT Invalido</value>
+  </data>
+  <data name="View_Required" xml:space="preserve">
+    <value>{0} es requerido</value>
+  </data>
 </root>

@@ -8,6 +8,7 @@ namespace Syspan.Core.Models
     [Table("Cliente")] 
     public class Cliente
     {
+        private ClienteStatus _estado = ClienteStatus.Active;
         [Key]
         public string Rut { get; set; }
        
@@ -80,7 +81,12 @@ namespace Syspan.Core.Models
         /// <summary>
         /// Gets or sets the property forma pago
         /// </summary>
-        public virtual FormaDePago FormaPago { get; set; }     
+        public virtual FormaDePago FormaPago { get; set; }
+
+        public ClienteStatus Estado {
+           get {return  _estado;}
+            set { _estado = value; }
+        }
 
 
     }

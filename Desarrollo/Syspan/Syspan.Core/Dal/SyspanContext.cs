@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Syspan.Core.Models;
+using Syspan.Core.Models.Generic;
 
 namespace Syspan.Core.Dal
 {
@@ -13,6 +14,8 @@ namespace Syspan.Core.Dal
         {
         }
 
+
+        public DbSet<Entidad> Entidades { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Giro> Giros { get; set; }
 

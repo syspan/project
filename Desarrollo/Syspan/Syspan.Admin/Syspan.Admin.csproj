@@ -876,6 +876,7 @@
     <Content Include="Content\assets\plugins\pace\pace-theme-minimal.css" />
     <Content Include="Content\assets\plugins\pace\pace.js" />
     <Content Include="Content\assets\plugins\pace\pace.min.js" />
+    <Content Include="Content\assets\plugins\rut\jquery.Rut.js" />
     <Content Include="Content\assets\plugins\select2\select2-bootstrap.css" />
     <Content Include="Content\assets\plugins\select2\select2-spinner.gif" />
     <Content Include="Content\assets\plugins\select2\select2.css" />
