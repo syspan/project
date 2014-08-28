@@ -41,7 +41,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-3">
                                         @Html.LabelFor(model => model.Rut)
-                                        @Html.TextBoxFor(model => model.Rut, new { @class = "form-control" })
+                                        @Html.TextBoxFor(model => model.Rut, new { @class = "form-control" } )
                                         @Html.ValidationMessageFor(model => model.Rut, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-sm-3">
@@ -63,24 +63,24 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-3">
-                                        @*@Html.LabelFor(model => model.IdGiro)
+                                        @Html.LabelFor(model => model.IdGiro)
                                         @Html.DropDownListFor(model => model.IdGiro, null, htmlAttributes: new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(model => model.IdGiro, "", new { @class = "text-danger" })*@
+                                        @Html.ValidationMessageFor(model => model.IdGiro, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-sm-3">
-                                        @*@Html.LabelFor(model => model.IdReparto)
+                                        @Html.LabelFor(model => model.IdReparto)
                                         @Html.DropDownListFor(model => model.IdReparto, null, htmlAttributes: new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(model => model.IdReparto, "", new { @class = "text-danger" })*@
+                                        @Html.ValidationMessageFor(model => model.IdReparto, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-sm-3">
-                                        @*@Html.LabelFor(model => model.IdFormaPago)
+                                        @Html.LabelFor(model => model.IdFormaPago)
                                         @Html.DropDownListFor(model => model.IdFormaPago, null, htmlAttributes: new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(model => model.IdFormaPago, "", new { @class = "text-danger" }*@)
+                                        @Html.ValidationMessageFor(model => model.IdFormaPago, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-sm-3">
-                                        @*@Html.LabelFor(model => model.IdEstado)
+                                        @Html.LabelFor(model => model.IdEstado)
                                         @Html.DropDownListFor(model => model.IdEstado, null, htmlAttributes: new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(model => model.IdEstado, "", new { @class = "text-danger" })*@
+                                        @Html.ValidationMessageFor(model => model.IdEstado, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -134,7 +134,9 @@
      </section>
         <!-- END MAIN CONTENT -->
 </aside>
-   
+   @section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>

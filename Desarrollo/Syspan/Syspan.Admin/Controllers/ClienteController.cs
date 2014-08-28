@@ -20,7 +20,7 @@ namespace Syspan.Admin.Controllers
         {
             Mapper.CreateMap<Cliente, ClienteModel>();
             var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.ToList()); //.Include(p => p.Giro).ToList()
-
+            
             return View(clients);
         }
 
@@ -67,6 +67,14 @@ namespace Syspan.Admin.Controllers
                 db.Clientes.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.IdGiro = new SelectList(db.Giros, "Id", "Nombre");
+                ViewBag.IdReparto = new SelectList(db.RepartoZonas, "Id", "Nombre");
+                ViewBag.IdFormaPago = new SelectList(db.FormaDePagos, "Id", "Nombre");
+                ViewBag.IdEstado = new SelectList(db.ClienteEstados, "Id", "Nombre");
+
             }
 
             return View(clientemodel);

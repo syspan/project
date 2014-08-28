@@ -9,6 +9,7 @@ namespace Syspan.Core.Models
 {
     public class RepartoZona
     {
+        [Key]
         public int Id { get; set; }
 
         /// <summary>

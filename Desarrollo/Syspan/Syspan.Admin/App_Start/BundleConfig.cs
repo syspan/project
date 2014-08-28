@@ -24,6 +24,12 @@ namespace Syspan.Admin
             //          "~/Scripts/respond.js"));
 
 
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+            "~/Scripts/jquery.validate*"));
+
+
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/assets/css/main.css",
                       "~/Content/assets/css/skins.css"));

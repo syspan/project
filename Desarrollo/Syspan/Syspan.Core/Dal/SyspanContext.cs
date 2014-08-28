@@ -25,13 +25,30 @@ namespace Syspan.Core.Dal
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+           
+            modelBuilder.Entity<RepartoZona>()
+            .HasMany(o => o.Clientes)
+            .WithOptional()
+            .HasForeignKey(c => c.IdReparto);
+
+            modelBuilder.Entity<ClienteEstado>()
+            .HasMany(o => o.Clientes)
+            .WithOptional()
+            .HasForeignKey(c => c.IdEstado);
+
+            modelBuilder.Entity<Giro>()
+             .HasMany(o => o.Clientes)
+             .WithOptional()
+             .HasForeignKey(c => c.IdGiro);
+
+            modelBuilder.Entity<FormaDePago>()
+             .HasMany(o => o.Clientes)
+             .WithOptional()
+             .HasForeignKey(c => c.IdFormaPago);
 
 
-            //modelBuilder.Entity<Group>()
-            //    .HasMany(u => u.Users).WithMany(g => g.Groups)
-            //    .Map(t => t.MapLeftKey("GroupId")
-            //        .MapRightKey("UserId")
-            //        .ToTable("GroupPerUser"));
+
+
         }
 
     }

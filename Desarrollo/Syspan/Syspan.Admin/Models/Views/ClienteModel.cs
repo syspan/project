@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Syspan.Admin.Properties;
+using Syspan.Core.Models;
 
 namespace Syspan.Admin.Models.Views
 {
@@ -47,5 +48,14 @@ namespace Syspan.Admin.Models.Views
         [Required]
         [Display(Name = "ClientModel_Estado", ResourceType = typeof(Resources))]
         public int IdEstado { get; set; }
+
+        //navigation properties
+        public virtual Giro Giro { get; set; }
+        public virtual RepartoZona RepartoZona { get; set; }
+        public virtual FormaDePago FormaDePago { get; set; }
+        public virtual ClienteEstado ClienteEstado { get; set; }
+
+
+
     }
 }

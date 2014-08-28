@@ -1,9 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Syspan.Core.Models
 {
+    [Table("Cliente")] 
     public class Cliente
     {
         [Key]
@@ -42,16 +44,19 @@ namespace Syspan.Core.Models
         /// <summary>
         /// Get or sets the reparto id
         /// </summary>
+        [ForeignKey("RepartoZona")]
         public int IdReparto { get; set; }
 
         /// <summary>
         /// Get or sets the status id
         /// </summary>
+        [ForeignKey("ClienteEstado")]
         public int IdEstado { get; set; }
 
         /// <summary>
         /// Get or sets the forma pago id
         /// </summary>
+        [ForeignKey("FormaPago")]
         public int IdFormaPago { get; set; }
 
         //Navigation property 
@@ -70,15 +75,26 @@ namespace Syspan.Core.Models
         /// <summary>
         /// Gets or sets the property cliente estado
         /// </summary>
-        [ForeignKey("IdEstado")]
         public virtual RepartoZona ClienteEstado { get; set; }
 
         /// <summary>
         /// Gets or sets the property forma pago
         /// </summary>
-        [ForeignKey("IdFormaPago")]
         public virtual FormaDePago FormaPago { get; set; }     
 
 
+    }
+
+
+    public class ClientMap : EntityTypeConfiguration<Cliente>
+    {
+        public ClientMap()
+        {
+            this.ToTable("Cliente", "Cliente");
+
+            // Primary Key
+            this.HasKey(p => p.Rut);
+           
+        }
     }
 }
