@@ -9,8 +9,8 @@ function initNotification() {
 	$(window).load(function(){
 		setTimeout(function(){
 			$.gritter.add({
-				title: 'Welcome back!',
-				text: 'You have 4 new notifications and 3 new messages.',
+				title: 'Info!',
+				text: 'Tienes 4 nuevas notificaciones y 3 nuevos mensajes.',
 				image: '../Content/assets/img/user/avatar01.png',
 				time: ''
 			});
@@ -19,8 +19,8 @@ function initNotification() {
 		
 		setTimeout(function(){
 			$.gritter.add({
-				title: 'Job meeting',
-				text: 'You have a job meeting at 10:00 AM.',
+				title: 'Reunion',
+				text: 'Tienes una reunion agendada a 4:00 PM.',
 				class_name: 'primary',
 				time: ''
 			});
