@@ -16,4 +16,3 @@ D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.xm
 D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\bin\Debug\EntityFramework.SqlServer.xml
 D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.dll
 D:\git\syspan\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.pdb
-D:\zFiles\project\Desarrollo\Syspan\Syspan.Core\obj\Debug\Syspan.Core.csprojResolveAssemblyReference.cache
