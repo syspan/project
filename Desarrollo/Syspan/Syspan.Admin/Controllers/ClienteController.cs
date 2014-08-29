@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using AutoMapper;
 using Microsoft.Ajax.Utilities;
 using Syspan.Admin.Models.Views;
+using Syspan.Admin.Properties;
 using Syspan.Core.Dal;
 using Syspan.Core.Models;
 using Syspan.Core.Models.Generic;
@@ -20,7 +21,6 @@ namespace Syspan.Admin.Controllers
         public ActionResult Index()
         {
             Mapper.CreateMap<Cliente, ClienteModel>();
-            //var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.Include(c => c.Giro).Include(c => c.ClienteEstado).Include(c => c.FormaPago).Include(c=> c.RepartoZona).ToList());
             var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.Include(c => c.Giro).Include(c => c.FormaPago).Include(c=> c.RepartoZona).ToList());
             
             return View(clients);
@@ -66,20 +66,11 @@ namespace Syspan.Admin.Controllers
                 )] ClienteModel clientemodel)
         {
             Mapper.CreateMap<ClienteModel, Cliente>();
+            clientemodel.Rut = clientemodel.Rut.Replace("-", "").Replace(".", "");
             var client = Mapper.Map<ClienteModel, Cliente>(clientemodel);
 
             if (ModelState.IsValid)
-            {
-                db.Entidades.Add(
-                    new Entidad
-                    {
-                        Email = clientemodel.Email,
-                        Rut = clientemodel.Rut,
-                        Nombre = clientemodel.Nombre
-
-                    }
-                    );
-                db.SaveChanges();
+            { 
                 db.Clientes.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -147,6 +138,8 @@ namespace Syspan.Admin.Controllers
             }
             Mapper.CreateMap<Cliente, ClienteModel>();
             var client = db.Clientes.Find(id);
+            db.Clientes.Remove(client);
+            db.SaveChanges();
 
             if (client == null)
             {
@@ -154,17 +147,6 @@ namespace Syspan.Admin.Controllers
             }
             return RedirectToAction("Index");
         }
-
-        //// POST: /Cliente/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(string id)
-        //{
-        //    ClienteModel clientemodel = db.ClienteModels.Find(id);
-        //    db.ClienteModels.Remove(clientemodel);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
 
         protected override void Dispose(bool disposing)
         {
@@ -174,5 +156,18 @@ namespace Syspan.Admin.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        #region remote validations
+        public JsonResult ClientExists(string rut)
+        {
+            var user = db.Clientes.FirstOrDefault(p => p.Rut == rut.Replace(".","").Replace("-",""));
+            return user == null ?
+                Json(true, JsonRequestBehavior.AllowGet) :
+                Json(string.Format("{0} {1}", rut, Resources.ClientRut_Duplicate_Error),
+                    JsonRequestBehavior.AllowGet);
+        }
+
+        #endregion
     }
 }

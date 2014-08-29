@@ -174,4 +174,7 @@
   <data name="ClienteModel_List_ZReparto" xml:space="preserve">
     <value>Z. Reparto</value>
   </data>
+  <data name="ClientRut_Duplicate_Error" xml:space="preserve">
+    <value>ya existe en el sistema</value>
+  </data>
 </root>

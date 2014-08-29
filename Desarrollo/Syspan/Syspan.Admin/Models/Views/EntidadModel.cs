@@ -12,8 +12,9 @@ namespace Syspan.Admin.Models.Views
     public class EntidadModel
     {
         [Key]
-        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
-        [RegularExpression(@"\b\d{1,8}\-[K|k|0-9]", ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "EntidadModel_Rut_InvalidFormat")]
+        [Required(ErrorMessageResourceType = typeof (Resources), ErrorMessageResourceName = "View_Required")]
+        //[RegularExpression(@"\b\d{1,8}\-[K|k|0-9]", ErrorMessageResourceType = typeof (Resources), ErrorMessageResourceName = "EntidadModel_Rut_InvalidFormat")]
+        [Remote("ClientExists", "Cliente", "RUT ya existe.")]
         public string Rut { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]

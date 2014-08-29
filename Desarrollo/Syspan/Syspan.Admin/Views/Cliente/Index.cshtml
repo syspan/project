@@ -120,7 +120,7 @@
                                             <a href="@Url.Action("Edit", "Cliente", new { id = item.Rut })">
                                                 <i class="fa fa-pencil bg-blue action"></i>
                                             </a>
-                                            <a href="@Url.Action("Delete", "Cliente", new { id = item.Rut })">
+                                            <a href="@Url.Action("Delete", "Cliente", new { id = item.Rut })" onclick="return confirm('Estas seguro de eliminar el cliente?')">
                                                 <i class="fa fa-times bg-red action"></i>
                                             </a>
 

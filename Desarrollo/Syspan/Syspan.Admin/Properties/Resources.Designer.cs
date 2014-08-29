@@ -178,6 +178,15 @@ namespace Syspan.Admin.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ya existe en el sistema.
+        /// </summary>
+        public static string ClientRut_Duplicate_Error {
+            get {
+                return ResourceManager.GetString("ClientRut_Duplicate_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
         public static string EntidadModel_Email {
