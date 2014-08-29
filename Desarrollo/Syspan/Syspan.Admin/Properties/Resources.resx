@@ -162,4 +162,16 @@
   <data name="LoginModel_UserName" xml:space="preserve">
     <value>Usuario</value>
   </data>
+  <data name="ClienteModel_List_Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="ClienteModel_List_FPago" xml:space="preserve">
+    <value>F. Pago</value>
+  </data>
+  <data name="ClienteModel_List_Saldo" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="ClienteModel_List_ZReparto" xml:space="preserve">
+    <value>Z. Reparto</value>
+  </data>
 </root>

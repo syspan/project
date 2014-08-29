@@ -70,6 +70,42 @@ namespace Syspan.Admin.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alias.
+        /// </summary>
+        public static string ClienteModel_List_Alias {
+            get {
+                return ResourceManager.GetString("ClienteModel_List_Alias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to F. Pago.
+        /// </summary>
+        public static string ClienteModel_List_FPago {
+            get {
+                return ResourceManager.GetString("ClienteModel_List_FPago", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saldo.
+        /// </summary>
+        public static string ClienteModel_List_Saldo {
+            get {
+                return ResourceManager.GetString("ClienteModel_List_Saldo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z. Reparto.
+        /// </summary>
+        public static string ClienteModel_List_ZReparto {
+            get {
+                return ResourceManager.GetString("ClienteModel_List_ZReparto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Memotecnico.
         /// </summary>
         public static string ClienteModel_Memotecnico {
