@@ -177,4 +177,22 @@
   <data name="ClientRut_Duplicate_Error" xml:space="preserve">
     <value>ya existe en el sistema</value>
   </data>
+  <data name="DireccionModel_Comuna" xml:space="preserve">
+    <value>Comuna</value>
+  </data>
+  <data name="DireccionModel_Descripcion" xml:space="preserve">
+    <value>Calle </value>
+  </data>
+  <data name="DireccionModel_Numero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="DireccionModel_Provincia" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="DireccionModel_Region" xml:space="preserve">
+    <value>Región</value>
+  </data>
+  <data name="Tipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
 </root>

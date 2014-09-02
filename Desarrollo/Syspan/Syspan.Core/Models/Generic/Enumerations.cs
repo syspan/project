@@ -18,4 +18,23 @@
         /// </summary>
         Inactive
     }
+
+    /// <summary>
+    /// Return values for the adressType
+    /// </summary>
+    public enum AddressType
+    {
+        /// <summary>
+        /// Principal
+        /// </summary>
+        Principal,
+        /// <summary>
+        /// Sucursal.
+        /// </summary>
+        Sucursal,
+        /// <summary>
+        /// Otro
+        /// </summary>
+        Otro
+    }
 }

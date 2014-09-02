@@ -18,11 +18,14 @@ namespace Syspan.Core.Dal
         public DbSet<Entidad> Entidades { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Giro> Giros { get; set; }
+        public DbSet<Direccion> Direcciones { get; set; }
+
+        public DbSet<Comuna> Comunas { get; set; }
+        public DbSet<Provincia> Provincias { get; set; }
+        public DbSet<Region> Regiones { get; set; }
 
         public DbSet<FormaDePago> FormaDePagos { get; set; }
-
         public DbSet<RepartoZona> RepartoZonas { get; set; }
-
         public DbSet<ClienteEstado> ClienteEstados { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -49,8 +52,10 @@ namespace Syspan.Core.Dal
              .WithOptional()
              .HasForeignKey(c => c.IdFormaPago);
 
-
-
+            //modelBuilder.Entity<Comuna>()
+            //.HasMany(o => o.)
+            //.WithOptional()
+            //.HasForeignKey(c => c.IdReparto);
 
         }
 

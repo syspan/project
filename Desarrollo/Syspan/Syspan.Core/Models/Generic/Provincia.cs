@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Syspan.Core.Models.Generic
 {
-    public class Comuna
+    public class Provincia
     {
         [Key]
         public int Id { get; set; }
@@ -21,18 +21,18 @@ namespace Syspan.Core.Models.Generic
         /// <summary>
         /// gets or sets the provincia
         /// </summary>
-        [ForeignKey("Provincia")]
-        public int IdProvincia { get; set; }
+        [ForeignKey("Region")]
+        public int IdRegion { get; set; }
 
         /// <summary>
-        /// Gets or sets the provincia
+        /// Gets or sets the region
         /// </summary>
-        public Provincia Provincia { get; set; }
+        public Region Region { get; set; }
 
         /// <summary>
-        /// Gets or sets the address
+        /// Gets or sets the comunas
         /// </summary>
-        public virtual ICollection<Direccion> Direcciones { get; set; }
+        public virtual ICollection<Comuna> Comunas { get; set; }
 
     }
 }

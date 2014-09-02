@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,21 +26,27 @@ namespace Syspan.Core.Models.Generic
         /// <summary>
         /// gets or sets the type
         /// </summary>
-        public int Tipo { get; set; }
+        public AddressType Tipo { get; set; }
 
         /// <summary>
         /// gets or sets the comuna
         /// </summary>
-        public string IdComuna { get; set; }
+        [ForeignKey("Comuna")]
+        public int IdComuna { get; set; }
 
         /// <summary>
-        /// Gets or sets the ciudad
+        /// Gets or sets the comuna
         /// </summary>
-        public List<Ciudad> Ciudad { get; set; }
+        public Comuna Comuna { get; set; }
 
         /// <summary>
         /// Gets or sets the status
         /// </summary>
-        public GenericStatus Status { get; set; }
+        public GenericStatus Estado { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rut
+        /// </summary>
+        public string Rut { get; set; }
     }
 }
