@@ -21,7 +21,7 @@ namespace Syspan.Admin.Controllers
         public ActionResult Index()
         {
             Mapper.CreateMap<Cliente, ClienteModel>();
-            var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.Include(c => c.Giro).Include(c => c.FormaPago).Include(c=> c.RepartoZona).ToList());
+            var clients = Mapper.Map<List<Cliente>, List<ClienteModel>>(db.Clientes.Include(c => c.Giro).Include(c => c.FormaDePago).Include(c=> c.RepartoZona).ToList());
             
             return View(clients);
         }

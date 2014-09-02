@@ -60,8 +60,10 @@ namespace Syspan.Admin
 
             bundles.Add(new ScriptBundle("~/bundles/js/plugin").Include(
             "~/Content/assets/plugins/jquery-flot/excanvas.min.js"));
-            
-            
+
+            bundles.Add(new ScriptBundle("~/bundles/modalform").Include(
+            "~/Scripts/modalform.js"));
+
             //<!-- BEGIN JS PLUGIN -->
             //<script src="assets/plugins/pace/pace.min.js"></script>
             //<script src="assets/plugins/jquery-totemticker/jquery.totemticker.min.js"></script>

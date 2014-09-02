@@ -41,6 +41,7 @@ namespace Syspan.Core.Models
         /// <summary>
         /// Get or sets the giro id
         /// </summary>
+        [ForeignKey("Giro")]
         public int IdGiro { get; set; }
 
         /// <summary>
@@ -58,31 +59,29 @@ namespace Syspan.Core.Models
         /// <summary>
         /// Get or sets the forma pago id
         /// </summary>
-        [ForeignKey("FormaPago")]
+        [ForeignKey("FormaDePago")]
         public int IdFormaPago { get; set; }
 
         //Navigation property 
         /// <summary>
         /// Gets or sets the property Giro
         /// </summary>
-        [ForeignKey("IdGiro")]
         public virtual Giro Giro { get; set; }
 
         /// <summary>
         /// Gets or sets the property reparto zona
         /// </summary>
-        [ForeignKey("IdReparto")]
         public virtual RepartoZona RepartoZona { get; set; }
 
         /// <summary>
         /// Gets or sets the property cliente estado
         /// </summary>
-        public virtual RepartoZona ClienteEstado { get; set; }
+        public virtual ClienteEstado ClienteEstado { get; set; }
 
         /// <summary>
         /// Gets or sets the property forma pago
         /// </summary>
-        public virtual FormaDePago FormaPago { get; set; }
+        public virtual FormaDePago FormaDePago { get; set; }
 
         public ClienteStatus Estado {
            get {return  _estado;}

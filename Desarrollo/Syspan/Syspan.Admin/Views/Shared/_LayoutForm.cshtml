@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="~/Content/assets/plugins/select2/select2.css">
     <link rel="stylesheet" href="~/Content/assets/plugins/select2/select2-bootstrap.css">
     <link rel="stylesheet" href="~/Content/assets/plugins/bootstrap-slider/css/slider.css">
+    <link rel="stylesheet" href="~/Content/assets/plugins/jquery-niftymodal/css/component.css">
+
     <!-- END CSS PLUGIN -->
     <!-- BEGIN CSS TEMPLATE -->
     <link rel="stylesheet" href="~/Content/assets/css/main.css">
@@ -49,6 +51,8 @@
         <!-- END SIDEBAR -->
         <!-- BEGIN CONTENT -->
         @RenderBody()
+ 
+
         <!-- END CONTENT -->
         <!-- BEGIN SCROLL TO TOP -->
         <div class="scroll-to-top"></div>
@@ -72,6 +76,9 @@
     <script src="~/Content/assets/plugins/select2/select2.js"></script>
     <script src="~/Content/assets/plugins/bootstrap-slider/js/bootstrap-slider.js"></script>
     <script src="~/Content/assets/js/form.js"></script>
+<script src="~/Content/assets/plugins/jquery-niftymodal/js/classie.js"></script>
+    <script src="~/Content/assets/plugins/jquery-niftymodal/js/modalEffects.js"></script>-->
+
     <!-- END JS PLUGIN -->
     <!-- BEGIN JS TEMPLATE -->
     <script src="~/Content/assets/js/main.js"></script>
@@ -107,9 +114,15 @@
 
         $('#Rut').Rut();
 
+
+        $('.focus :input').focus();
+
+
     </script>
  
 
+    @Scripts.Render("~/bundles/modalform")
+    
 
     <!-- END JS TEMPLATE -->
 </body>
