@@ -8,66 +8,66 @@
 
 <!-- BEGIN CONTENT -->
 
-    <!-- BEGIN MAIN CONTENT -->
-    <section class="content">
+<!-- BEGIN MAIN CONTENT -->
+
+<section class="content">
         <div class="col-md-12">
-            @using (Html.BeginForm())
-            {
+        @using (Html.BeginForm("Create", "Direccion", FormMethod.Post, new { id = "frmCreateDireccion" }))
+        {
                 @Html.AntiForgeryToken()
                 <div class="grid">
                     <div class="grid-header">
                         <i class="fa fa-align-left"></i>
-                        @*<span class="grid-title">Principal</span>*@
+                        <span class="grid-title">Agregar</span>
 
                         <div class="pull-right grid-tools">
-                            <button class="btn btn-primary" type="submit">Guardar</button>
-                            <a href="@Url.Action("Index", "Cliente")">
-                                <button class="btn btn-default" type="button">Cancelar</button>
-                            </a>
-                            <a data-widget="collapse" title="Collapse"><i class="fa fa-chevron-up"></i></a>
-                            <a data-widget="reload" title="Reload"><i class="fa fa-refresh"></i></a>
                             <a data-widget="remove" title="Remove"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
-                    <div class="grid-body">
-                        <fieldset>
-                            @*<legend>Principal</legend>*@
-                            <div class="form-group">
-                                <div class="col-sm-3">
-                                    @Html.LabelFor(model => model.Descripcion)
-                                    @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control" })
+                    <div class="form-horizontal" style="padding: 25px;">
+                                <div class="form-group">
+                                 @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                                   <div class="col-md-10">
+                                     @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control focus" })
                                     @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
-                                <div class="col-sm-3">
-                                    @Html.LabelFor(model => model.Numero)
-                                    @Html.TextBoxFor(model => model.Numero, new { @class = "form-control" })
-                                    @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                                
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Numero, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(model => model.Numero, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                                    </div>
                                 </div>
-                                <div class="col-sm-3">
-                                    @Html.LabelFor(model => model.IdComuna)
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.IdComuna, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
                                     @Html.DropDownListFor(model => model.IdComuna, null, htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.IdComuna, "", new { @class = "text-danger" })
                                 </div>
-                                <div class="col-sm-3">
-                                    @Html.LabelFor(model => model.IdProvincia)
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.IdProvincia, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
                                     @Html.DropDownListFor(model => model.IdProvincia, null, htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.IdProvincia, "", new { @class = "text-danger" })
                                 </div>
-
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-3">
-                                    @Html.LabelFor(model => model.IdRegion)
+                                @Html.LabelFor(model => model.IdRegion, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
                                     @Html.DropDownListFor(model => model.IdRegion, null, htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.IdRegion, "", new { @class = "text-danger" })
                                 </div>
-                              
                             </div>
 
-
-                        </fieldset>
                     </div>
-
+                     <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal">Cancel</button>
+                        <input class="btn btn-primary" type="submit" value="Add" />
+                    </div>
                 </div>
             }
         </div>
@@ -75,8 +75,9 @@
     </section>
     <!-- END MAIN CONTENT -->
 
+
+
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-
-

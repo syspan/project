@@ -35,6 +35,7 @@
                                         <a href="@Url.Action("Index", "Cliente")">
                                             <button class="btn btn-default" type="button">Cancelar</button>
                                         </a>
+                                       
                                         <a data-widget="collapse" title="Collapse"><i class="fa fa-chevron-up"></i></a>
                                         <a data-widget="reload" title="Reload"><i class="fa fa-refresh"></i></a>
                                         <a data-widget="remove" title="Remove"><i class="fa fa-times"></i></a>
@@ -108,39 +109,20 @@
                                         </div>
                                         <div class="form-group voffset1">
                                             <div class="col-sm-12" style="margin-top: 50px">
-                                                @Html.Partial("_TextArea")
+                                                @*<div class="row">*@
+                                                    @*<div class="col-md-offset-2 col-md-10">*@
+                                                        @{ Html.RenderAction("Index", "Direccion"); }
+                                                    @*</div>*@
+                                                @*</div>*@
+
                                             </div>
                                         </div>
                                         <div class="form-group voffset1">
                                             <div class="col-sm-12" style="margin-top: 50px">
-                                               @{Html.RenderAction("Index", "Direccion");}
+                                                @Html.Partial("_TextArea")
                                             </div>
                                         </div>
-                                    </fieldset>
-                                    @*<fieldset>
-                                  <div style="margin-top: 50px">
-
-                                      <legend>Direcciones</legend>
-                                      <div class="form-group">
-                                          <div class="col-sm-12">
-                                              <label for="user_locale">Language</label>
-                                              <select class="form-control" id="user_locale" name="user[locale]">
-                                                  <option value="de" selected="selected">Deutsch</option>
-                                                  <option value="en">English</option>
-                                              </select>
-                                          </div>
-                                      </div>
-                                  </div>
-                            </fieldset>*@
-                    
-
-                                    @*<div class="form-group">
-                                <div class="navbar-right navbar-default">
-                                    <input class="btn btn-primary" value="Guardar Cliente" data-loading-text="Loading..." id="btnSubmit" type="submit">
-                                </div>
-                            </div>*@
-                         
-                   
+                                   </fieldset>
                                 </div>
                
                             </div>
@@ -155,6 +137,31 @@
 }
 
 
-    <div>
+
+<div>
         @Html.ActionLink("Back to List", "Index")
     </div>
+
+
+@*<div class="modal fade" id="modalPrimary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+    <div class="modal-wrapper">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                @{ Html.RenderAction("Create", "Direccion"); }
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+<div class="modal-wrapper">
+    <div class="modal-dialog">
+        <div class="modal-body">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+

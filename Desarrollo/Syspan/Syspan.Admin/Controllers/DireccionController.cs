@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Syspan.Admin.Models.Views;
+using Syspan.Admin.Properties;
 using Syspan.Core.Dal;
 using Syspan.Core.Models.Generic;
 using AutoMapper;
@@ -18,12 +19,16 @@ namespace Syspan.Admin.Controllers
         private SyspanContext db = new SyspanContext();
 
         // GET: /Direccion/
-        public ActionResult Index(string rut)
+        public ActionResult Index(string id)
         {
-                Mapper.CreateMap<Direccion, DireccionModel>();
-            var direcciones = Mapper.Map<List<Direccion>, List<DireccionModel>>(db.Direcciones.Where(p => p.Rut == rut).ToList());
+            Mapper.CreateMap<Direccion, DireccionModel>();
+            var direcciones = Mapper.Map<List<Direccion>, List<DireccionModel>>(db.Direcciones.Where(p => p.Rut == id).ToList());
 
-            return View(direcciones);
+            var address = GetPersistAddress();
+            direcciones.Add(address);
+
+            return PartialView("Index", direcciones);
+
         }
 
        
@@ -35,7 +40,7 @@ namespace Syspan.Admin.Controllers
             ViewBag.IdProvincia = new SelectList(db.Provincias, "Id", "Nombre");
             ViewBag.IdRegion = new SelectList(db.Regiones, "Id", "Nombre");
 
-            return View();
+            return PartialView("Create");
         }
 
         // POST: /Direccion/Create
@@ -43,23 +48,40 @@ namespace Syspan.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Id,Descripcion,Numero,Tipo,IdComuna,IdProvincia,IdRegion")] DireccionModel direccionmodel)
+        public JsonResult Create([Bind(Include = "Id,Descripcion,Numero,Tipo,IdComuna,IdProvincia,IdRegion")] DireccionModel direccionmodel)
         {
-            if (ModelState.IsValid)
-            {
-                Mapper.CreateMap<DireccionModel, Direccion>();
-                var direccion = Mapper.Map<DireccionModel, Direccion>(direccionmodel);
-                db.Direcciones.Add(direccion);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    return Json(GetJsonValue(true, "Success"));
+            //}
 
-            ViewBag.IdComuna = new SelectList(db.Comunas, "Id", "Nombre");
-            ViewBag.IdProvincia = new SelectList(db.Provincias, "Id", "Nombre");
-            ViewBag.IdRegion = new SelectList(db.Regiones, "Id", "Nombre");
+           PersistAddress(direccionmodel);
+           string url = Url.Action("Index", "Direccion");
+           return Json(new { success = true, url = url });
 
+            // return Json(GetJsonValue(true, "Error"));
+        }
 
-            return View(direccionmodel);
+        /// <summary>
+        /// 
+        /// </summary>
+        private void PersistAddress(DireccionModel direccionmodel)
+        {
+            Session["direccionmodel"] = direccionmodel;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private DireccionModel GetPersistAddress()
+        {
+            return (DireccionModel) (Session["direccionmodel"] ?? new DireccionModel());
+        }
+
+        private static Dictionary<string, string> GetJsonValue(bool status, string message)
+        {
+            var jsonResult = new Dictionary<string, string> { { "Success", status.ToString() }, { "Message", message } };
+            return jsonResult;
         }
 
         //// GET: /Direccion/Edit/5

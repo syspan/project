@@ -32,20 +32,20 @@ namespace Syspan.Core.Dal
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
            
-            modelBuilder.Entity<RepartoZona>()
-            .HasMany(o => o.Clientes)
-            .WithOptional()
-            .HasForeignKey(c => c.IdReparto);
+            //modelBuilder.Entity<RepartoZona>()
+            //.HasMany(o => o.Clientes)
+            //.WithOptional()
+            //.HasForeignKey(c => c.IdReparto);
 
-            modelBuilder.Entity<ClienteEstado>()
-            .HasMany(o => o.Clientes)
-            .WithOptional()
-            .HasForeignKey(c => c.IdEstado);
+            //modelBuilder.Entity<ClienteEstado>()
+            //.HasMany(o => o.Clientes)
+            //.WithOptional()
+            //.HasForeignKey(c => c.IdEstado);
 
-            modelBuilder.Entity<Giro>()
-             .HasMany(o => o.Clientes)
-             .WithOptional()
-             .HasForeignKey(c => c.IdGiro);
+            //modelBuilder.Entity<Giro>()
+            // .HasMany(o => o.Clientes)
+            // .WithOptional()
+            // .HasForeignKey(c => c.IdGiro);
 
             modelBuilder.Entity<FormaDePago>()
              .HasMany(o => o.Clientes)
