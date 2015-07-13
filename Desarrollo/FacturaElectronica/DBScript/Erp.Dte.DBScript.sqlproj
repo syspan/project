@@ -73,4 +73,7 @@
     <None Include="Data\InsertProvincias.sql" />
     <None Include="Data\InsertRegiones.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Erp.Dte.DBScript.refactorlog" />
+  </ItemGroup>
 </Project>
