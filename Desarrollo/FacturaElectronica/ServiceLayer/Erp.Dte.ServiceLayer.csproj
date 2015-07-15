@@ -46,21 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Dal\SyspanContext.cs" />
-    <Compile Include="Model\ClienteProveedor.cs" />
     <Compile Include="Model\Cliente.cs" />
-    <Compile Include="Model\ClienteEstado.cs" />
     <Compile Include="Model\Enumerations.cs" />
-    <Compile Include="Model\FormaDePago.cs" />
     <Compile Include="Model\Common\Region.cs" />
     <Compile Include="Model\Common\Provincia.cs" />
     <Compile Include="Model\Common\Comuna.cs" />
     <Compile Include="Model\Common\Direccion.cs" />
     <Compile Include="Model\Common\Entidad.cs" />
     <Compile Include="Model\Common\Enumerations.cs" />
-    <Compile Include="Model\Giro.cs" />
-    <Compile Include="Model\RepartoZona.cs" />
+    <Compile Include="Model\Contacto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

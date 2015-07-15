@@ -18,9 +18,9 @@ namespace Erp.Dte.UI.Models.Views
         [Display(Name = "ClienteProveedor_RazonSocial", ResourceType = typeof(Resources))]
         public string RazonSocial { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
-        [Display(Name = "ClienteProveedor_Tipo", ResourceType = typeof(Resources))]
-        public ClienteProveedorType Tipo { get; set; }
+        //[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "View_Required")]
+        //[Display(Name = "ClienteProveedor_Tipo", ResourceType = typeof(Resources))]
+        //public ClienteProveedorType Tipo { get; set; }
 
         [StringLength(200)]
         [Display(Name = "ClienteProveedor_NombreFantasia", ResourceType = typeof(Resources))]

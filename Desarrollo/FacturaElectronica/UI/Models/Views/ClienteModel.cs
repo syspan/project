@@ -49,10 +49,10 @@ namespace Syspan.Admin.Models.Views
         public int IdEstado { get; set; }
 
         //navigation properties
-        public virtual Giro Giro { get; set; }
-        public virtual RepartoZona RepartoZona { get; set; }
-        public virtual FormaDePago FormaDePago { get; set; }
-        public virtual ClienteEstado ClienteEstado { get; set; }
+        //public virtual Giro Giro { get; set; }
+        //public virtual RepartoZona RepartoZona { get; set; }
+        //public virtual FormaDePago FormaDePago { get; set; }
+        //public virtual ClienteEstado ClienteEstado { get; set; }
 
 
 

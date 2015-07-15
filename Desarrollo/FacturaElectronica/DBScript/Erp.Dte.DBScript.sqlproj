@@ -62,11 +62,13 @@
     <Folder Include="Data" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\ClienteProveedor.sql" />
     <Build Include="dbo\Tables\Regiones.sql" />
     <Build Include="dbo\Tables\Provincias.sql" />
     <Build Include="dbo\Tables\Productos.sql" />
     <Build Include="dbo\Tables\Comunas.sql" />
+    <Build Include="dbo\Tables\Proveedor.sql" />
+    <Build Include="dbo\Tables\Cliente.sql" />
+    <Build Include="dbo\Tables\Categorias.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\InsertComunas.sql" />

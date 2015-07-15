@@ -1,107 +1,45 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
-using Syspan.Core.Models.Generic;
-using Erp.Dte.ServiceLayer.Model;
-
-namespace Syspan.Core.Models
+namespace Erp.Dte.ServiceLayer.Model
 {
-    [Table("Cliente")] 
-    public class Cliente : Entidad
+    [Table("ClienteProveedor")]
+    public class Cliente
     {
-        private ClienteStatus _estado = ClienteStatus.Active;
-        //[Key]
-        //public string Rut { get; set; }
-       
         /// <summary>
-        /// Gets or sets the property alias
+        /// Gets or sets the property rut
+        /// </summary>
+        [Key]
+        public string Rut { get; set; }
+
+        /// <summary>
+        /// Gets or sets the razon social
+        /// </summary>
+        public string RazonSocial { get; set; }
+
+        /// <summary>
+        /// Gets or sets the nombre fantasia
         /// </summary>
         public string NombreFantasia { get; set; }
 
         /// <summary>
-        /// Gets or sets the property branch name
+        /// Gets or sets the giro
         /// </summary>
-        public string CodSucursal { get; set; }
+        public string Giro { get; set; }
 
         /// <summary>
-        /// Gets or sets the property alias
+        /// Gets or sets the property contacto
         /// </summary>
-        public string Memotecnico { get; set; }
-
+        public Contacto Contacto { get; set; }
+        
         /// <summary>
-        /// Gets or sets the property max 
-        /// </summary>
-        public int SaldoMax { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property comments
+        /// Gets or sets the correo
         /// </summary>
         public string Observacion { get; set; }
 
         /// <summary>
-        /// Get or sets the giro id
+        /// Gets or sets the estado
         /// </summary>
-        [ForeignKey("Giro")]
-        public int IdGiro { get; set; }
-
-        /// <summary>
-        /// Get or sets the reparto id
-        /// </summary>
-        [ForeignKey("RepartoZona")]
-        public int IdReparto { get; set; }
-
-        /// <summary>
-        /// Get or sets the status id
-        /// </summary>
-        [ForeignKey("ClienteEstado")]
-        public int IdEstado { get; set; }
-
-        /// <summary>
-        /// Get or sets the forma pago id
-        /// </summary>
-        [ForeignKey("FormaDePago")]
-        public int IdFormaPago { get; set; }
-
-        //Navigation property 
-        /// <summary>
-        /// Gets or sets the property Giro
-        /// </summary>
-        public virtual Giro Giro { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property reparto zona
-        /// </summary>
-        public virtual RepartoZona RepartoZona { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property cliente estado
-        /// </summary>
-        public virtual ClienteEstado ClienteEstado { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property forma pago
-        /// </summary>
-        public virtual FormaDePago FormaDePago { get; set; }
-
-        public ClienteStatus Estado {
-           get {return  _estado;}
-            set { _estado = value; }
-        }
-
-
+        public ClienteStatus Estado { get; set; }
     }
-
-
-    //public class ClientMap : EntityTypeConfiguration<Cliente>
-    //{
-    //    public ClientMap()
-    //    {
-    //        this.ToTable("Cliente", "Cliente");
-
-    //        // Primary Key
-    //        this.HasKey(p => p.Rut);
-           
-    //    }
-    //}
 }
