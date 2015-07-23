@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dal\SyspanContext.cs" />
-    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Dal\ClientesPersistor.cs" />
+    <Compile Include="Dal\DTEContext.cs" />
+    <Compile Include="Model\Clientes\ClienteInfo.cs" />
+    <Compile Include="Model\Clientes\Criteria.cs" />
     <Compile Include="Model\Enumerations.cs" />
     <Compile Include="Model\Common\Region.cs" />
     <Compile Include="Model\Common\Provincia.cs" />
