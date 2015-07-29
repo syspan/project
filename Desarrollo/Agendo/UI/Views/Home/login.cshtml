@@ -1,0 +1,28 @@
+﻿@model Syspan.Admin.Models.Views.LoginModel
+@{
+    ViewBag.Title = "login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="col-lg-12">
+    <h3 class="text-center login-title">Log in para continuar</h3>
+    <div class="account-wall">
+        <!-- BEGIN PROFILE IMAGE -->
+        <img class="profile-img" src="~/Content/assets/img/photo.png" alt="">
+        <!-- END PROFILE IMAGE -->
+        <!-- BEGIN LOGIN FORM -->
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post,  new { @class = "form-login" }))
+            {
+             @Html.AntiForgeryToken()
+             @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", placeholder = "Email", autofocus="true" })
+             @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password", autofocus = "true" })
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+            <label class="checkbox pull-left">
+                <input type="checkbox" value="remember-me">Recordar usuario
+            </label>    
+            <a href="#" class="pull-right need-help">Necesita ayuda?</a><span class="clearfix"></span>
+            }
+        <!-- END LOGIN FORM -->
+    </div>
+</div>
+            

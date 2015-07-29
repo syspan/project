@@ -1,0 +1,10 @@
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\Erp.Dte.ServiceLayer.dll.config
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\Erp.Dte.ServiceLayer.dll
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\Erp.Dte.ServiceLayer.pdb
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\EntityFramework.dll
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\EntityFramework.xml
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\obj\Debug\AgendaClic.ServiceLayer.csprojResolveAssemblyReference.cache
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\obj\Debug\Erp.Dte.ServiceLayer.dll
+D:\Projects\project\Desarrollo\AgendaClic\ServiceLayer\obj\Debug\Erp.Dte.ServiceLayer.pdb
