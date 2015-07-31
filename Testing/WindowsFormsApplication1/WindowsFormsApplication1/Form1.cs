@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             string to = txtTo.Text;
             string msg = txtMessage.Text;
 
-            WhatsApp wa = new WhatsApp(from, "hXYN1vWci60z0Df6s7yautuO+Ks=", "rodrigo", false, false);
+            WhatsApp wa = new WhatsApp(from, "2kVzSn7Mf2CP09+LnqVs+t9EWy8=", "rodrigo", false, false);
             
             wa.OnConnectSuccess += () =>
             {
