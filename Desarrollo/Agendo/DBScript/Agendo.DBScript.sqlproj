@@ -62,20 +62,18 @@
     <Folder Include="Data" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Regiones.sql" />
-    <Build Include="dbo\Tables\Provincias.sql" />
-    <Build Include="dbo\Tables\Productos.sql" />
-    <Build Include="dbo\Tables\Comunas.sql" />
-    <Build Include="dbo\Tables\Proveedor.sql" />
-    <Build Include="dbo\Tables\Cliente.sql" />
-    <Build Include="dbo\Tables\Categorias.sql" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Data\InsertComunas.sql" />
     <None Include="Data\InsertProvincias.sql" />
     <None Include="Data\InsertRegiones.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Erp.Dte.DBScript.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Visitor.sql" />
+    <Build Include="dbo\Tables\SpecialistType.sql" />
+    <Build Include="dbo\Tables\Specialist.sql" />
+    <Build Include="dbo\Tables\Service.sql" />
+    <Build Include="dbo\Tables\Appointment.sql" />
   </ItemGroup>
 </Project>
