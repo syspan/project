@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Erp.Dte.ServiceLayer.Model.Clientes
+namespace Agendo.ServiceLayer.Model.Clientes
 {
     public class Criteria
     {
-        private ClienteStatus _estado = ClienteStatus.Active;
+        private GeneralStatus _estado = GeneralStatus.Active;
 
         public string Rut { get; set; }
 
@@ -30,7 +30,8 @@ namespace Erp.Dte.ServiceLayer.Model.Clientes
         /// <summary>
         /// Gets or sets the estado
         /// </summary>
-        public ClienteStatus Estado {
+        public GeneralStatus Estado
+        {
             get { return _estado;}
             set { _estado = value; }
         }

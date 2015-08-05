@@ -14,4 +14,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Descripcion" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d51f400e-a927-4883-a2b2-d0a37987ba04" ChangeDateTime="08/05/2015 02:09:42" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Service].[Status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Service]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Precio" />
+  </Operation>
 </Operations>

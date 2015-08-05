@@ -1,9 +1,9 @@
-﻿namespace Erp.Dte.ServiceLayer.Model
+﻿namespace Agendo.ServiceLayer.Model
 {
     /// <summary>
-    /// Return values for the customer status
+    /// Return values for the general status
     /// </summary>
-    public enum ClienteStatus
+    public enum GeneralStatus
     {
         /// <summary>
         /// Deleted

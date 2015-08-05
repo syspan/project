@@ -9,7 +9,6 @@ using Syspan.Admin.Models.Views;
 using Agendo.UI.Properties;
 using Syspan.Core.Models;
 using Syspan.Core.Models.Generic;
-using Erp.Dte.ServiceLayer.Dal;
 namespace Syspan.Admin.Controllers
 {
     public class ClienteController : Controller

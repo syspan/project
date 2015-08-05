@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Syspan.Core.Models;
-using Syspan.Core.Models.Generic;
-using Erp.Dte.ServiceLayer.Model;
-using Erp.Dte.ServiceLayer.Model.Clientes;
-
 namespace Agendo.ServiceLayer.Dal
 {
     public class AgendoContext : DbContext
@@ -16,7 +11,8 @@ namespace Agendo.ServiceLayer.Dal
         {
         }
 
-        public DbSet<ClienteInfo> Clientes { get; set; }
+        public DbSet<Agendo.ServiceLayer.Model.Clientes.ClienteInfo> Clientes { get; set; }
+        public DbSet<Agendo.ServiceLayer.Model.Service.ServiceInfo> Services { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

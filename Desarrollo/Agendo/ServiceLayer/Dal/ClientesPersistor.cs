@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using Erp.Dte.ServiceLayer.Model.Clientes;
-using Agendo.ServiceLayer.Dal;
-namespace Erp.Dte.ServiceLayer.Dal
+using Agendo.ServiceLayer.Model.Clientes;
+using Agendo.ServiceLayer.Model;
+namespace Agendo.ServiceLayer.Dal
 {
     public class ClientesPersistor
     {
@@ -59,7 +59,7 @@ namespace Erp.Dte.ServiceLayer.Dal
             if (info == null)
                 throw new InvalidOperationException("El cliente no existe");
 
-            info.Estado = Model.ClienteStatus.Deleted;
+            info.Estado = GeneralStatus.Deleted;
             db.Entry(info).State = EntityState.Modified;
             db.SaveChanges();
         }

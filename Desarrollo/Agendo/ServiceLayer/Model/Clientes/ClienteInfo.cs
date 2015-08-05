@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace Erp.Dte.ServiceLayer.Model.Clientes
+namespace Agendo.ServiceLayer.Model.Clientes
 {
     [Table("ClienteProveedor")]
     public class ClienteInfo
@@ -40,6 +40,6 @@ namespace Erp.Dte.ServiceLayer.Model.Clientes
         /// <summary>
         /// Gets or sets the estado
         /// </summary>
-        public ClienteStatus Estado { get; set; }
+        public GeneralStatus Estado { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Erp.Dte.ServiceLayer.Model
+﻿namespace Agendo.ServiceLayer.Model
 {
     public class Contacto
     {

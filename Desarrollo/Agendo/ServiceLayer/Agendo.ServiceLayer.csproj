@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dal\ServicePersistor.cs" />
     <Compile Include="Dal\ClientesPersistor.cs" />
     <Compile Include="Dal\AgendoContext.cs" />
+    <Compile Include="Model\Category\CategoryInfo.cs" />
     <Compile Include="Model\Clientes\ClienteInfo.cs" />
     <Compile Include="Model\Clientes\Criteria.cs" />
     <Compile Include="Model\Enumerations.cs" />
@@ -58,6 +60,8 @@
     <Compile Include="Model\Common\Entidad.cs" />
     <Compile Include="Model\Common\Enumerations.cs" />
     <Compile Include="Model\Contacto.cs" />
+    <Compile Include="Model\Service\Criteria.cs" />
+    <Compile Include="Model\Service\ServiceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
