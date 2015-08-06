@@ -24,7 +24,7 @@ namespace Agendo.ServiceLayer.Dal
             return db.Services.FirstOrDefault(p => p.Id == id);
         }
         /// <summary>
-        /// Get the client list based on the filter criteria.
+        /// Get the service list based on the filter criteria.
         /// </summary>
         /// <param name="criteria">The filter criteria</param>
         /// <returns>Client List</returns>

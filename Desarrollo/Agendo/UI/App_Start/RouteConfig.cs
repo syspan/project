@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Syspan.Admin
+namespace UI
 {
     public class RouteConfig
     {
@@ -16,7 +16,7 @@ namespace Syspan.Admin
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Login", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

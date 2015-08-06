@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Agendo")]
-[assembly: AssemblyDescription("Agendo UI")]
+[assembly: AssemblyTitle("UI")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Agendo")]
-[assembly: AssemblyProduct("Agendo")]
-[assembly: AssemblyCopyright("Copyright ©  2015 Agendo")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("UI")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("97a0f816-eefa-4440-9c81-6bdbae5f183d")]
+[assembly: Guid("194aa0a5-4d66-495b-ba82-f6456cb1edf9")]
 
 // Version information for an assembly consists of the following four values:
 //
