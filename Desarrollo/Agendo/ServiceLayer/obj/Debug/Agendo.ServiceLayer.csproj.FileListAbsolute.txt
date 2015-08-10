@@ -17,3 +17,13 @@ D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.xml
 D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.dll
 D:\Projects\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.pdb
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.csprojResolveAssemblyReference.cache
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.dll
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.pdb
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Agendo.ServiceLayer.dll.config
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Agendo.ServiceLayer.dll
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Agendo.ServiceLayer.pdb
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.dll
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.xml
+D:\DTE\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.SqlServer.xml

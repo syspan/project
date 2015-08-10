@@ -1,6 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Agendo.ServiceLayer.Model.Category;
+
 namespace Agendo.ServiceLayer.Model.Service
 {
     [Table("Service")]
