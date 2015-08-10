@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\ServiceManager.cs" />
     <Compile Include="Dal\ServicePersistor.cs" />
     <Compile Include="Dal\ClientesPersistor.cs" />
     <Compile Include="Dal\AgendoContext.cs" />
@@ -65,7 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bll\" />
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{1bbc16c5-12e9-418b-acc9-37cf69a6f558}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

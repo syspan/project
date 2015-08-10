@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Syspan.Admin
+namespace UI
 {
     public class FilterConfig
     {
