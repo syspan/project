@@ -17,5 +17,7 @@ namespace Agendo.ServiceLayer.Dal
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
+        public System.Data.Entity.DbSet<Agendo.ServiceLayer.Model.Category.CategoryInfo> CategoryInfoes { get; set; }
+
     }
 }

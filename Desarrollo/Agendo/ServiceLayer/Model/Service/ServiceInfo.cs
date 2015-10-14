@@ -28,6 +28,13 @@ namespace Agendo.ServiceLayer.Model.Service
         /// </summary>
         public string Price { get; set; }
 
+
+        /// <summary>
+        /// Get or sets the giro id
+        /// </summary>
+        [ForeignKey("Category")]
+        public string CategoryId { get; set; }
+        
         /// <summary>
         /// Gets or sets the property category
         /// </summary>

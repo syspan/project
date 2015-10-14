@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace UI.Controllers
+namespace Agendo.UI.Controllers
 {
     public class HomeController : Controller
     {

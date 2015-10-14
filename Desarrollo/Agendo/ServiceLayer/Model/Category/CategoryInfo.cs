@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Agendo.ServiceLayer.Model.Service;
+
 namespace Agendo.ServiceLayer.Model.Category
 {
-    [Table("Service")]
+    [Table("Category")]
     public class CategoryInfo
     {
         /// <summary>
@@ -20,5 +23,9 @@ namespace Agendo.ServiceLayer.Model.Category
         /// Gets or sets the status
         /// </summary>
         public GeneralStatus Status { get; set; }
+
+        //Navigation property 
+        public virtual ICollection<ServiceInfo> Services { get; set; }
+
     }
 }

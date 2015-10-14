@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace UI
+namespace Agendo.UI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

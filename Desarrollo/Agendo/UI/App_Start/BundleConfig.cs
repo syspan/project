@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace UI
+namespace Agendo.UI
 {
     public class BundleConfig
     {
