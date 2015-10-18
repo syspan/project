@@ -1,5 +1,0 @@
-D:\Projects\project\Desarrollo\Agendo\Framework\bin\Debug\Framework.dll
-D:\Projects\project\Desarrollo\Agendo\Framework\bin\Debug\Framework.pdb
-D:\Projects\project\Desarrollo\Agendo\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
-D:\Projects\project\Desarrollo\Agendo\Framework\obj\Debug\Framework.dll
-D:\Projects\project\Desarrollo\Agendo\Framework\obj\Debug\Framework.pdb

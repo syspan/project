@@ -1,9 +1,0 @@
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\EntityFramework.dll
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\EntityFramework.SqlServer.dll
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\EntityFramework.xml
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\EntityFramework.SqlServer.xml
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\Erp.Dte.ServiceLayer.dll.config
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\Erp.Dte.ServiceLayer.dll
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\bin\Debug\Erp.Dte.ServiceLayer.pdb
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\obj\Debug\Erp.Dte.ServiceLayer.dll
-D:\Projects\project\Desarrollo\FacturaElectronica\Syspan.Core\obj\Debug\Erp.Dte.ServiceLayer.pdb
