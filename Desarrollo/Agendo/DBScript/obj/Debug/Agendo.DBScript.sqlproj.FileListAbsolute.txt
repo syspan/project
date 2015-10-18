@@ -17,3 +17,7 @@ D:\DTE\project\Desarrollo\Agendo\DBScript\bin\Debug\DBFacturaElectronica.dll
 D:\DTE\project\Desarrollo\Agendo\DBScript\bin\Debug\DBFacturaElectronica.pdb
 D:\DTE\project\Desarrollo\Agendo\DBScript\obj\Debug\DBFacturaElectronica.dll
 D:\DTE\project\Desarrollo\Agendo\DBScript\obj\Debug\DBFacturaElectronica.pdb
+D:\Projects\project\Desarrollo\Agendo\DBScript\obj\Debug\Model.xml
+D:\Projects\project\Desarrollo\Agendo\DBScript\obj\Debug\refactor.xml
+D:\Projects\project\Desarrollo\Agendo\DBScript\obj\Debug\postdeploy.sql
+D:\Projects\project\Desarrollo\Agendo\DBScript\obj\Debug\predeploy.sql

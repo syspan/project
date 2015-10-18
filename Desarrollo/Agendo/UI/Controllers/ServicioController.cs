@@ -18,7 +18,7 @@ namespace Agendo.UI.Controllers
         // GET: /Servicio/
         public ActionResult Index()
         {
-            var services = db.Services.Include(s => s.Category);
+            var services = db.Services.ToList();
             return View(services.ToList());
         }
 
