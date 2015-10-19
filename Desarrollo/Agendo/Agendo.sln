@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agendo.ServiceLayer", "Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{1BBC16C5-12E9-418B-ACC9-37CF69A6F558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{D98D8129-9B6E-4302-A156-78434DADECBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceApi", "ServiceApi\ServiceApi.csproj", "{D98D8129-9B6E-4302-A156-78434DADECBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{6257D753-A058-42B8-817C-5E6656033877}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{D98D8129-9B6E-4302-A156-78434DADECBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98D8129-9B6E-4302-A156-78434DADECBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98D8129-9B6E-4302-A156-78434DADECBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6257D753-A058-42B8-817C-5E6656033877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6257D753-A058-42B8-817C-5E6656033877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6257D753-A058-42B8-817C-5E6656033877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6257D753-A058-42B8-817C-5E6656033877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
