@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controllers\HomeController.js" />
+    <Content Include="Controllers\ServiceController.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
@@ -869,6 +870,7 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Services\Servicios.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
@@ -878,7 +880,6 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="Models\" />
-    <Folder Include="Services\" />
     <Folder Include="Servicios\" />
   </ItemGroup>
   <PropertyGroup>
@@ -896,7 +897,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51190</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51190/</IISUrl>
+          <IISUrl>http://localhost:55/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

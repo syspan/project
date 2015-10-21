@@ -26,7 +26,7 @@ namespace Agendo.ServiceLayer.Model.Service
         /// <summary>
         /// Gets or sets the price
         /// </summary>
-        public string Price { get; set; }
+        public double Price { get; set; }
 
 
         /// <summary>
