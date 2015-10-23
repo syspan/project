@@ -1,25 +1,24 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="AgendoModule">
-<head>
-    <title>Employee Details</title>
-    <script src="../Scripts/jquery-2.1.4.min.js"></script>
-    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
-    <link href="../CSS/Site.css" rel="stylesheet" />
-    <script src="../Scripts/angular.min.js">
 
-    </script>
-    <script src="../Scripts/bootstrap.min.js">
 
-    </script>
-    <script src="../Scripts/app.js">
 
-    </script>
-    <script src="../Controllers/ServiceController.js"></script>
-</head>
-<body ng-controller="EmployeesController">
+    <head>
+        <title>Project Tracking Home Page</title>
+        <script src="../Scripts/jquery-2.1.4.min.js"></script>
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+        <link href="../CSS/Site.css" rel="stylesheet" />
+        <script src="../Scripts/bootstrap.min.js"></script>
+        <script src="../Scripts/angular.min.js"></script>
+        <script src="../Scripts/app.js"></script>
+        <script src="../Controllers/ServiceController.js"></script>
+    </head>
+
+
+<body ng-controller="employeesController">
     <h1>{{Title}}</h1>
     <p>Nombre Servicio - {{Employees.Name}}</p>
     <p>Tiempo Promedio - {{Employees.avgTime}}</p>
     <p>Precio. - {{Employees.price}}</p>
- </body>
+</body>
 </html>

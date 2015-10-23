@@ -14,7 +14,7 @@ using Agendo.ServiceLayer.Dal;
 
 namespace Agendo.Service.Api.Controllers
 {
-    [EnableCors(origins: "http://127.0.0.1:55/", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:55", headers: "*", methods: "*")]
     public class ServicioController : ApiController
     {
         private AgendoContext db = new AgendoContext();
@@ -28,7 +28,7 @@ namespace Agendo.Service.Api.Controllers
 
         // GET api/Servicio
         [Route("api/services")]
-        public HttpResponseMessage  GetServices()
+        public HttpResponseMessage Get()
         {
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, db.Services.ToList());
             return response;
