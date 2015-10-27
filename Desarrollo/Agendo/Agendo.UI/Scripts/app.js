@@ -3,8 +3,8 @@ app.config(['$routeProvider',
   function ($routeProvider) {
       $routeProvider.
         when('/Servicios', {
-            templateUrl: 'Services/Index.html',
-            controller: 'employeesController'
+            templateUrl: 'Views/Services/Index.html',
+            controller: 'serviceController'
         }).
         otherwise({
             redirectTo: '/home1'

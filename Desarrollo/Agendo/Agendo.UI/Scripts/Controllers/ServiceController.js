@@ -1,16 +1,16 @@
 ﻿(function () {
-    var employeesController = function ($scope, $http) {
+    var serviceController = function ($scope, $http) {
         var employees = function (serviceResp) {
-            $scope.Employees = serviceResp.data;
+            $scope.Services = serviceResp.data;
            
         };
         var errorDetails = function (serviceResp) {
-            $scope.Error = "Something went wrong ??";
+            $scope.Error = "Ocurrio un error??";
         };
 
         $http.get("../api/services")
             .then(employees, errorDetails);
-        $scope.Title = "Employee Details Page";
+        $scope.Title = "Servicios";
     };
-    app.controller("employeesController", employeesController);
+    app.controller("serviceController", serviceController);
 }());
