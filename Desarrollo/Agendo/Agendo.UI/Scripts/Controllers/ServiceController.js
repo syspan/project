@@ -8,7 +8,7 @@
             $scope.Error = "Ocurrio un error??";
         };
 
-        $http.get("../api/services")
+        $http.get("api/services")
             .then(employees, errorDetails);
         $scope.Title = "Servicios";
     };
