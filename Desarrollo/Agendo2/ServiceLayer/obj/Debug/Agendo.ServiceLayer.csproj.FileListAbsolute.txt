@@ -1,0 +1,12 @@
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Agendo.ServiceLayer.dll.config
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Agendo.ServiceLayer.dll
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Agendo.ServiceLayer.pdb
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.dll
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Framework.dll
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\Framework.pdb
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.xml
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.csprojResolveAssemblyReference.cache
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.dll
+D:\Projects\project\Desarrollo\Agendo\ServiceLayer\obj\Debug\Agendo.ServiceLayer.pdb

@@ -1,0 +1,2 @@
+D:\Projects\project\Desarrollo\Agendo\UI\obj\Debug\CustomerManager.dll
+D:\Projects\project\Desarrollo\Agendo\UI\obj\Debug\CustomerManager.pdb
